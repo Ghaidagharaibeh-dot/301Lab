@@ -16,6 +16,15 @@ class Main extends React.Component {
     }
 }
 
+
+
+// clickOnCardFun =() =>{
+//     this.setState({
+        
+
+//     })
+//   }
+
     render(){
 
         // console.log(this.state)
@@ -36,6 +45,7 @@ this.state.data.map(item=>{
                             title={item.title}
                             imgUrl={item.image_url}
                             description={item.description}
+
         
                         />
                     )
