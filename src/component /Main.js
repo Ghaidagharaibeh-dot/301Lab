@@ -1,41 +1,58 @@
 import React from 'react';
+import HornedBeast  from './HornedBeast '
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import  Data from './Data.json';
+import Row from 'react-bootstrap/Row'
 
-import HornedBeast  from "./HornedBeast ";
 
-// import Description from './homedBeast/Description';
+
 
 class Main extends React.Component {
-    render() {
-        return( <>
-       
-            <HornedBeast  thetitle= 'UniWhal'
-             description= 'A unicorn and a narwhal nuzzling their horns' 
-             imges="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg"
-             />
-
-<HornedBeast  thetitle= 'Rhino Family' 
-             description= 'Mother (or father) rhino with two babies' 
-             imges2="https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80"/>
-
-      
-<HornedBeast  thetitle= 'Unicorn Head' 
-             description= 'Someone wearing a creepy unicorn head mask' 
-             imges="https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHjSU3VkE490.jpg/wholesale-halloween-costume-prop-unicorn.jpg"/>
-
-      
-<HornedBeast  thetitle= 'Basically a unicorn' 
-             description= 'A narwhal is basically a unicorn after all, right?' 
-             imges="https://i.pinimg.com/736x/b4/61/06/b46106830b841017ea59870b27ec18dc--narwhals-a-unicorn.jpg"/>
-
-
-       
-       
-
-
-</>
-
-        )
+    constructor(props){
+        super(props);
+        this.state={
+        data: Data
+  
     }
 }
+
+    render(){
+
+        // console.log(this.state)
+
+        return(
+            <>
+
+<Row xs={1} md={3} className="g-4">
+
+
+{
+
+this.state.data.map(item=>{
+                     return(
+                        
+                        <HornedBeast
+        
+                            title={item.title}
+                            imgUrl={item.image_url}
+                            description={item.description}
+        
+                        />
+                    )
+                     })
+                    }
+                </Row>
+    
+
+            </>
+                    
+        )
+
+
+    
+  
+    }
+}
+
 
 export default Main;
