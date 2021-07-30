@@ -14,11 +14,11 @@ class Model extends react.Component{
           <Modal.Title>{this.props.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body onClick={this.props.countNumOfclick}>
-            <img src={this.props.img} alt={this.props.title} style={{ width: '15rem'  }} style={{ height: '18rem'  }}/>
+            <img src={this.props.src} alt={this.props.title} style={{ height: '18rem' ,width:'13rem'  }}/>
 
            <p>{this.props.description}</p>
         <p>
-            Number of click :💖{this.props.numOfclick}
+            Number of click :💖{this.props.countNumOfclick}
             </p>
   </Modal.Body>
         <Modal.Footer>
